@@ -1,4 +1,9 @@
-<div class="container">
+<app-not-found
+  [visible]="!food.id"
+  notFoundMessage="Food not Found"
+></app-not-found>
+
+<div *ngIf="food.id" class="container">
     <img [src]="food.imageUrl" [alt]="food.name"/>
   
     <div class="details">
@@ -34,3 +39,5 @@
       </div>
   
       <button (click) = "addToCart()">Add To Cart</button>
+    </div>
+</div>
